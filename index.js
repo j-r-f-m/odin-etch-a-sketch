@@ -1,4 +1,29 @@
-function createGrid (n) {
+n = 32;
+n_grid = n * n;
+
+
+grid_size = 760;  //size is 760 x 760, needs to be the same size as in style.css
+
+ratio = grid_size / n; // size of one side of a tile
+console.log(ratio);
+
+for (let i = 1; i <= n_grid; i++ ) {
+    const selectContainer = document.querySelector('.container');
+    containerElement = document.createElement('div');
+    containerElement.classList.add('container-element');
+    
+    containerElement.style.width = `${ratio}px`;
+    containerElement.style.height = `${ratio}px`;
+    //containerElement.textContent = `${i}`;
+    selectContainer.appendChild(containerElement);
+}
+
+
+
+
+
+/**
+ * function createGrid (n) {
     // create grid
     
 
@@ -24,23 +49,5 @@ function createGrid (n) {
 }
 
 createGrid(5)
-
-
-
-/***
- * i = 0;
-j = 0;
-const grid = document.querySelector('.container');
-const rowContainer = document.createElement('div');
-rowContainer.classList.add(`row${i}`);
-grid.appendChild(rowContainer);
-
-
-const containerRow = document.querySelector(`.row${i}`);
-const rowElement = document.createElement('div');
-rowElement.classList.add('grid-title');
-rowElement.textContent = `tile${i}${j}`;
-containerRow.appendChild(rowElement)
-console.log(containerRow)
-
+ * 
  */
