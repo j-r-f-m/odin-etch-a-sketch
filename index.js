@@ -45,10 +45,10 @@ btn.addEventListener("click", () => {
         n = 100;
         selectContainer.replaceChildren();
         createGrid(n)
-    } else if (n <= 100) {
+    } else if (n <= 100 && n !== null) {
         selectContainer.replaceChildren();
         createGrid(n)
-    } else {
+    } else if (n === null) {
         selectContainer.replaceChildren();
         createGrid(16);
     }
