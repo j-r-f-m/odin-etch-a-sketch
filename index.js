@@ -37,7 +37,7 @@ tile.addEventListener("mouseover", e => {
 const btn = document.querySelector('.btn');
 console.log(btn);
 btn.addEventListener("click", () => {
-    let n = prompt("How many squares per side?", 16);
+    let n = prompt("How many squares per side?",16);
     console.log('1 ' + n);
     let selectContainer = document.querySelector('.container');
 
@@ -48,9 +48,11 @@ btn.addEventListener("click", () => {
     } else if (n <= 100) {
         selectContainer.replaceChildren();
         createGrid(n)
+    } else {
+        selectContainer.replaceChildren();
+        createGrid(16);
     }
-    selectContainer.replaceChildren();
-    createGrid(16)  
+    
     
     
 })
